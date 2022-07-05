@@ -538,8 +538,7 @@ GPU不需要在远距离上对对象进行全分辨率纹理采样，因此可�
 见上方纹理颜色空间
 
 
-
-![image-20220527110454976](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220527110454976.png)
+](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/)image-20220527110454976.png)
 
 **Alpha Source**
 
