@@ -36,7 +36,7 @@ URP:
 3. Set the "SuntailUniversalRenderPipelineAsset" as default or keep your own (Edit > Project Setiings > Graphics > Scriptable Render Pipeline Settings)
 ```
 
-![image-20220525102901236](https://github.com/tianxuhui1999/Unity_Optimization/tree/master/Readmeimages/image-20220525102901236.png)
+![image-20220525102901236](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220525102901236.png)
 
 3.在Project Settings 中将 Tag and Layer 设置和 Quality 设置替换为资源设置。
 
@@ -163,7 +163,7 @@ public class XXXAssetPostprocessor : AssetPostprocessor
 
 1.这种方式实现了资源的统一设置，但有时同类资源也有不同的导入设置，这是需要通过不同的文件夹对不同配置需求的同类资源进行区分，或者通过资源文件名区分，这样导入工具就还可以通过对路径的管理，通过做表达式或通配符进行分类配置。并对导入资源设置做持久化，可以继承[ScriptableObject](https://docs.unity3d.com/cn/current/Manual/class-ScriptableObject.html)对象来持久化设置，也可以与第二种方法结合使用Presets来完成，Presets是从ScriptableObject继承而来。
 
-![image-20220530141849581](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530141849581.png)
+![image-20220530141849581](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530141849581.png)
 
 2.这样就解决了在资源导入时的资源统一设置问题和同类资源不同导入设置的问题，但在编辑时可能涉及人为误修改导致打包时出现问题，如果仅在打包时重新统一资源有可能导致有些问题只在打包后才出现，所以建议使用新的接口来保证资源统一
 
@@ -198,30 +198,30 @@ Unity2018时加入的功能
 
 **缺点：**无法和后续工作流整合，只适合做资源导入设置。
 
-![image-20220530142445452](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530142445452.png)
+![image-20220530142445452](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530142445452.png)
 
 任意资源右上角的都有Presets按钮，打开Presets界面后可以序列化存储当前资源的设置
 
-![image-20220530142624497](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530142624497.png)
+![image-20220530142624497](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530142624497.png)
 
-![image-20220530142650421](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530142650421.png)
+![image-20220530142650421](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530142650421.png)
 
 这样就可以很方便地应用此资源的设置到其他资源上。
 
 同样资源的导入设置也可以持久化成Presets，而且可以将Presets资源添加到Project Settings -> Preset Manager中
 
-![image-20220530143040629](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530143040629.png)
+![image-20220530143040629](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530143040629.png)
 
 这样就可以将统一的资源设置应用到导入的新对象或新资源上
 
 在Preset Manager中可以为每一个Presets添加高级过滤搜索选项，具体支持的符号和通配符如下图：
 
-![image-20220530143256371](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530143256371.png)
+![image-20220530143256371](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530143256371.png)
 
 对于在第1种方法中遇到的资源变化问题，也可以同样使用OnAssetsModified接口进行完善，重新进行导入设置
 只需将[Unity - Manual: Applying default presets to Assets by folder (unity3d.com)](https://docs.unity3d.com/Manual/DefaultPresetsByFolder.html)中的代码文件放到Editor文件夹下，同时删除Preset Manager中的默认预设并将Preset放到对应资产文件夹中即可。
 
-![image-20220530143842340](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530143842340.png)
+![image-20220530143842340](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530143842340.png)
 
 如上图所示，Doors文件夹中的文件不论进行什么修改，都会自动设置为与文件夹下的DoorSound Preset一致，任何人为的修改都会被忽略
 
@@ -245,9 +245,9 @@ AssetGraph可以可视化编辑资源流，只需要添加OverWrite Import Setti
 
 可以勾选Use As Postprocessor来检测新资源导入的回调流程，并可以通过点击Execute按钮执行整个资源处置流程
 
-![image-20220530145834893](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530145834893.png)
+![image-20220530145834893](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530145834893.png)
 
-![image-20220530145909908](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530145909908.png)
+![image-20220530145909908](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530145909908.png)
 
 ## 5.项目资源分布
 
@@ -287,7 +287,7 @@ AssetGraph可以可视化编辑资源流，只需要添加OverWrite Import Setti
 assetcheck.exe --project="C:\Users\ianxhtian\Documents\Unity2022_SUNTAIL_Stylized_Fantasy_Village_Optimization" --includePaths="Assets" ----projectId="77fe08eb-3822-4536-80a2-5bba53a4b17f"
 ```
 
-![image-20220526145335648](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220526145335648.png)
+![image-20220526145335648](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220526145335648.png)
 
 Asset Checker会对相应资源提出优化建议
 
@@ -295,7 +295,7 @@ Asset Checker会对相应资源提出优化建议
 
 资源检测报告：
 
-![image-20220526145519612](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220526145519612.png)
+![image-20220526145519612](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220526145519612.png)
 
 1.可以看到该类资源没有开启ForceToMono选项，但该类资源为左右声道声音相同的立体声，如不需要双声道的音频，可以强制转换为单声道节省声音的内存占用，降低包体大小（尤其是在移动端，几乎无法察觉）。
 
@@ -311,7 +311,7 @@ Asset Checker会对相应资源提出优化建议
 移动平台一般不需要48000Hz采样率的音频，建议设置为22050Hz（对音质影响最小的最低设置）来减少不必要的浪费。
 具体操作为修改 Sample Rate Setting 为 Override Sample Rate 进行复写操作
 
-![](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220526145534610.png)
+![](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220526145534610.png)
 
 4.不同音乐音效类型，要使用不同的Load Type
 
@@ -331,11 +331,11 @@ Asset Checker会对相应资源提出优化建议
 
 
 
-![image-20220526164538437](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220526164538437.png)
+![image-20220526164538437](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220526164538437.png)
 
 优化前Audio Memery使用了**76.4MB**的内存
 
-![image-20220526164951708](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220526164951708.png)
+![image-20220526164951708](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220526164951708.png)
 
 优化后Audio Memery只使用了**7.3MB**的内存，**降低了90%**
 
@@ -347,7 +347,7 @@ Asset Checker会对相应资源提出优化建议
 
 #### Unity模型导入流程
 
-![image-20220526195012289](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220526195012289.png)
+![image-20220526195012289](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220526195012289.png)
 
 尽量使用fbx模型文件作为导入链
 
@@ -400,7 +400,7 @@ Asset Checker会对相应资源提出优化建议
 
 #### Modle资源检测报告
 
-![image-20220526201416007](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220526201416007.png)
+![image-20220526201416007](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220526201416007.png)
 
 将所有静态模型的Animation Type设置为None
 
@@ -408,11 +408,11 @@ Asset Checker会对相应资源提出优化建议
 
 将Materials标签下的Material Creation Mode设置为None
 
-![image-20220526201543684](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220526201543684.png)
+![image-20220526201543684](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220526201543684.png)
 
 限制为500顶点，过于严苛，无修改必要
 
-![image-20220526201556629](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220526201556629.png)
+![image-20220526201556629](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220526201556629.png)
 
 ### Modle文件优化结果
 
