@@ -538,7 +538,7 @@ GPU不需要在远距离上对对象进行全分辨率纹理采样，因此可�
 见上方纹理颜色空间
 
 
-](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/)image-20220527110454976.png)
+![image-20220527110454976](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220527110454976.png)
 
 **Alpha Source**
 
@@ -552,7 +552,7 @@ GPU不需要在远距离上对对象进行全分辨率纹理采样，因此可�
 
 是否忽略png文件中的gamma属性，这个选项是否忽略取决于png文件中设置不同gamma属性导致的显示不正常，一般原图制作流程没有特殊设置，这个选项一般默认就好。 
 
-![image-20220527110624107](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220527110624107.png)
+![image-20220527110624107](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220527110624107.png)
 
 **Non-Power of 2**
 
@@ -613,7 +613,7 @@ GPU不需要在远距离上对对象进行全分辨率纹理采样，因此可�
 
 详见：[Recommended, default, and supported texture formats, by platform - Unity 手册 (unity3d.com)](https://docs.unity3d.com/cn/current/Manual/class-TextureImporterOverride.html)
 
-![image-20220527111637807](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220527111637807.png)
+![image-20220527111637807](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220527111637807.png)
 
 ![img](https://i0.hdslb.com/bfs/article/544df923ae4e751ce401f95ebd0b51942c25bef4.png@942w_425h_progressive.webp)
 
@@ -639,41 +639,41 @@ GPU不需要在远距离上对对象进行全分辨率纹理采样，因此可�
 
 #### Texture资源检测报告
 
-![image-20220530094330395](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530094330395.png)
+![image-20220530094330395](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530094330395.png)
 
 长宽不是2的幂次的纹理资源会导致内存占用过大且无法压缩
 
-![image-20220530094447748](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530094447748.png)
+![image-20220530094447748](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530094447748.png)
 
 纹理的alpha通道不包含有效信息是将Alpha Source设置为None来节省内存
 
-![image-20220530094551832](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530094551832.png)
+![image-20220530094551832](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530094551832.png)
 
 有些纯色纹理可以通过降低纹理大小或者直接用参数代替
 
-![image-20220530094730629](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530094730629.png)
+![image-20220530094730629](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530094730629.png)
 
 检查Repeat Wrap模式是否设置正确，错误时更改为Clamp Wrap模式
 
-![image-20220530094916509](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530094916509.png)
+![image-20220530094916509](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530094916509.png)
 
 重复纹理改为公用并删除节省资源占用和包体大小
 
-![image-20220530094951844](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530094951844.png)
+![image-20220530094951844](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530094951844.png)
 
 检查纹理的大小，结合Unity编辑器判断是否过采样，并将过采样的纹理大小降低
 
 ### Texture文件优化结果
 
-![image-20220530095609315](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530095609315.png)
+![image-20220530095609315](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530095609315.png)
 
-![image-20220530095536262](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530095536262.png)
+![image-20220530095536262](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530095536262.png)
 
 纹理的内存使用减少140MB
 
-![image-20220530095738047](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530095738047.png)
+![image-20220530095738047](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530095738047.png)
 
-![image-20220530095752691](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530095752691.png)
+![image-20220530095752691](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530095752691.png)
 
 包体大小降低120MB
 
@@ -781,7 +781,7 @@ GPU不需要在远距离上对对象进行全分辨率纹理采样，因此可�
 
 ### Animation文件优化结果
 
-![image-20220530104311605](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530104311605.png)
+![image-20220530104311605](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530104311605.png)
 
 项目中仅有三个动画文件且曲线数量较少，无优化空间。
 
@@ -815,7 +815,7 @@ CPU/GPU强制同步
 
 Unite提供的在1000万次测试后数据为下：
 
-![image-20220530155400363](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220530155400363.png)
+![image-20220530155400363](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220530155400363.png)
 
 效率差距近十几倍
 
@@ -976,13 +976,13 @@ Animator Controller Graph中的所有动画节点的Animation Clip都会载入�
 
 ### 静态资源优化后Profiler结果
 
-![image-20220531091510033](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531091510033.png)
+![image-20220531091510033](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531091510033.png)
 
-![image-20220531091616601](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531091616601.png)
+![image-20220531091616601](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531091616601.png)
 
 ### Xcode Metal Capture报告
 
-![image-20220531101958309](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531101958309.png)
+![image-20220531101958309](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531101958309.png)
 
 ### 工程优化重点
 
@@ -1000,7 +1000,7 @@ Animator Controller Graph中的所有动画节点的Animation Clip都会载入�
 
 ### SSAO优化
 
-![image-20220531104611751](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531104611751.png)
+![image-20220531104611751](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531104611751.png)
 
 #### 1.**DownSample**  
 
@@ -1008,21 +1008,21 @@ Animator Controller Graph中的所有动画节点的Animation Clip都会载入�
 
 原设置：
 
-![image-20220531105021058](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531105021058.png)
+![image-20220531105021058](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531105021058.png)
 
 修改为：
 
-![image-20220531105046546](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531105046546.png)
+![image-20220531105046546](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531105046546.png)
 
 其次URP中只对AO第一张**m_AOPassDescripto**r进行了降采样处理，可修改为每一步都进行降采样处理，也可以拓展SSAO参数暴露到编辑器中，指定每一步采样各自的降采样率来达到分别控制的效果
 
 原设置：
 
-![image-20220531105234695](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531105234695.png)
+![image-20220531105234695](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531105234695.png)
 
 修改为：
 
-![image-20220531105301765](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531105301765.png)
+![image-20220531105301765](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531105301765.png)
 
 
 
@@ -1052,7 +1052,7 @@ AO强度设置，只影响混合系数，不影响性能，搭配其他优化进
 
 #### 最终修改结果
 
-![image-20220531110319565](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531110319565.png)
+![image-20220531110319565](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531110319565.png)
 
 **开启降采样并将降采样系数调整为1/4，并应用至所有采样步骤。**
 
@@ -1060,7 +1060,7 @@ AO强度设置，只影响混合系数，不影响性能，搭配其他优化进
 
 #### 最终优化结果
 
-![image-20220531111448355](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531111448355.png)
+![image-20220531111448355](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531111448355.png)
 
 
 
@@ -1070,7 +1070,7 @@ AO强度设置，只影响混合系数，不影响性能，搭配其他优化进
 
 
 
-![image-20220531123358597](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531123358597.png)
+![image-20220531123358597](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531123358597.png)
 
 
 
@@ -1078,7 +1078,7 @@ AO强度设置，只影响混合系数，不影响性能，搭配其他优化进
 
 
 
-![image-20220531123451834](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531123451834.png)
+![image-20220531123451834](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531123451834.png)
 
 
 
@@ -1090,9 +1090,9 @@ AO强度设置，只影响混合系数，不影响性能，搭配其他优化进
 
 
 
-![image-20220531125058453](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531125058453.png)
+![image-20220531125058453](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531125058453.png)
 
-![image-20220531125114359](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531125114359.png)
+![image-20220531125114359](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531125114359.png)
 
 **帧数明显提升，表现效果无可明显察觉的差异**
 
@@ -1138,7 +1138,7 @@ AO强度设置，只影响混合系数，不影响性能，搭配其他优化进
 
 #### 优化部分
 
-![image-20220531142327051](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531142327051.png)
+![image-20220531142327051](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531142327051.png)
 
 从Xcode Metal Capture报告中可以看出，项目中使用SMAA，耗时为3.24ms
 
@@ -1146,13 +1146,13 @@ AO强度设置，只影响混合系数，不影响性能，搭配其他优化进
 
 1.
 
-![image-20220531142536516](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531142536516.png)
+![image-20220531142536516](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531142536516.png)
 
-![image-20220531142756892](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531142756892.png)
+![image-20220531142756892](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531142756892.png)
 
 在工程Camera中，可以调节SMAA的质量选项为Low后，SMAA耗时由3.24ms降低至2.52ms，主要下降的部分为SMAA的第二个pass
 
-![image-20220531143332988](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531143332988.png)
+![image-20220531143332988](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531143332988.png)
 
 通过查看SMAA shader的源码可以得知，不同质量挡位之间只有SMAA的阈值（SMAA_MAX_SEARCH_STEP）和计算权重的步长（SMAA_DISABLE_DIAG_DETECTION）的差异。
 
@@ -1180,17 +1180,17 @@ AO强度设置，只影响混合系数，不影响性能，搭配其他优化进
 
 #### 最终优化结果
 
-![image-20220531155042494](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531155042494.png)
+![image-20220531155042494](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531155042494.png)
 
 **UPR报告显示平均帧率由20.46提升为24.96，提高约4.5帧**
 
-![image-20220531155148343](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531155148343.png)
+![image-20220531155148343](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531155148343.png)
 
 **纹理资源的内存占用也降低了20MB**
 
-![image-20220531125114359](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531125114359.png)
+![image-20220531125114359](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531125114359.png)
 
-![image-20220531155412309](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531155412309.png)
+![image-20220531155412309](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531155412309.png)
 
 **帧数明显提升，表现效果无可明显察觉的差异**
 
@@ -1229,24 +1229,24 @@ AO强度设置，只影响混合系数，不影响性能，搭配其他优化进
 
 #### 优化部分
 
-![image-20220531160608224](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531160608224.png)
+![image-20220531160608224](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531160608224.png)
 
 为了资源效果表现，项目原有较多后处理效果
 
-![image-20220531160755875](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531160755875.png)
+![image-20220531160755875](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531160755875.png)
 
 将效果可控的部分和性能占用较大的动态模糊部分Remove，正式项目中应修改原始美术资源达到删除部分的视觉效果，
 本项目不方便修改美术资源，所以通过调节Color Adjustments的Post Exposure数值使Vignette删除前后画面效果差距减小
 
-![image-20220531161248629](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531161248629.png)
+![image-20220531161248629](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531161248629.png)
 
 调整URP Asset中的后处理选项，将HDR改为LDR（如果为支持浮点精度运算的设备则可以开启HDR），并降低size，开启Fast sRGB
 
-![image-20220531161326648](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531161326648.png)
+![image-20220531161326648](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531161326648.png)
 
 对于bloom部分的优化，选择降低第一遍pass的采样分辨率和最大downscale迭代次数
 
-![image-20220531161926556](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531161926556.png)
+![image-20220531161926556](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531161926556.png)
 
 如需进一步优化Bloom的其他pass，可以参考Unreal官方的次时代手机渲染GDC演讲
 
@@ -1254,17 +1254,17 @@ AO强度设置，只影响混合系数，不影响性能，搭配其他优化进
 
 #### 最终优化结果
 
-![image-20220531170010988](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531170010988.png)
+![image-20220531170010988](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531170010988.png)
 
 **UPR报告显示平均帧率由24.96提升为25.78，提高约0.82帧**
 
-![image-20220531170120662](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531170120662.png)
+![image-20220531170120662](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531170120662.png)
 
 **纹理资源的内存占用也降低了5MB**
 
-![image-20220531155412309](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531155412309.png)
+![image-20220531155412309](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531155412309.png)
 
-![image-20220531170231461](C:\Users\ianxhtian\AppData\Roaming\Typora\typora-user-images\image-20220531170231461.png)
+![image-20220531170231461](https://github.com/tianxuhui1999/Unity_Optimization/blob/master/Readmeimages/image-20220531170231461.png)
 
 **画面色彩稍有区别，正式项目应当调整美术资源消除优化影响**
 
