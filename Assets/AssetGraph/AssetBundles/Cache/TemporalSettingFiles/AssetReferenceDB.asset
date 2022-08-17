@@ -39418,4 +39418,32 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.render-pipelines.universal/ShaderLibrary/UnityTypes.hlsl
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: e9dd3260730b9e345a2d454f3d5a5330
+    m_importFrom: Assets/Suntail Village/Demo/Suntail Village/Skybox.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e9dd3260730b9e345a2d454f3d5a5330
+    m_importFrom: Assets/Suntail Village/Demo/Suntail Village/Skybox.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2e0e4f6c279f83d4099c9c59c8668d08
+    m_importFrom: Assets/Suntail Village/Demo/Suntail Village/ReflectionProbe-0.exr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 641ff12a2c704c24fb55e5c0dfac12b0
+    m_importFrom: Assets/Suntail Village/Demo/Suntail Village/ReflectionProbe-3.exr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d86d0c8118ccb324b905b6d820deb597
+    m_importFrom: Assets/Suntail Village/Demo/Suntail Village/ReflectionProbe-1.exr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7565b53252945e44981662ca126dcf4f
+    m_importFrom: Assets/Suntail Village/Demo/Suntail Village/ReflectionProbe-2.exr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1271d16b53d7a12449f517c002761f8d
+    m_importFrom: Assets/Suntail Village/Demo/Suntail Village/LightingData.asset
+    m_exportTo: 
+    m_variantName: 
   m_version: 2
