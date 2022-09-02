@@ -40,3 +40,11 @@ sysinfo.txt
 *.unitypackage
 MemoryCaptures/Snapshot-637968720546718994.snap
 MemoryCaptures/Snapshot-637968720546718994.png
+/.idea
+/Assets
+/Documents
+/MemoryCaptures
+/ProjectSettings
+/UserSettings
+/.DS_Store
+/.vsconfig
